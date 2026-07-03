@@ -52,6 +52,28 @@ h4 {
   transform: translateY(-1px);
 }
 
+/* Smooth page transition — replays on each navigation via app/template.tsx. */
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-transition {
+  animation: page-enter 0.4s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-transition {
+    animation: none;
+  }
+}
+
 /* Dark, moody background used by hero + testimonials sections.
    Placeholder for a real photo — swap for a background image when available. */
 .hero-gradient {
