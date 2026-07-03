@@ -2,25 +2,64 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #111111;
+  --hero: #0a0a0a;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-hero: var(--hero);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-heading);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Elegant serif display headings (Cormorant tops out at 700 — avoid faux-bold,
+   and give uppercase titles a little breathing room). */
+h1,
+h2,
+h3,
+h4 {
+  font-synthesis: none;
+  letter-spacing: 0.01em;
+}
+
+/* White rounded "pill" call-to-action button (LEARN MORE / GET IN TOUCH) */
+.pill-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background: #ffffff;
+  color: #0a0a0a;
+  padding: 1rem 2.75rem;
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.pill-btn:hover {
+  background: rgba(255, 255, 255, 0.86);
+  transform: translateY(-1px);
+}
+
+/* Dark, moody background used by hero + testimonials sections.
+   Placeholder for a real photo — swap for a background image when available. */
+.hero-gradient {
+  background: radial-gradient(
+    115% 90% at 50% 18%,
+    #33313a 0%,
+    #1a1a1e 42%,
+    #0c0c0e 72%,
+    #070708 100%
+  );
 }
