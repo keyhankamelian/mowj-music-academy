@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Link from "next/link";
 
 const audioTracks = [
   { src: "/media/journey.mp3", title: "Journey", credit: "Keyhan Kamelian" },
@@ -106,7 +107,7 @@ export default function Media() {
 
         {/* Associations */}
         <div className="mt-20 border-t border-black/10 pt-14">
-          <div className="mx-auto flex max-w-3xl flex-wrap items-center justify-center gap-x-14 gap-y-8">
+          <div className="mx-auto grid max-w-3xl grid-cols-1 items-center justify-items-center gap-10 sm:grid-cols-3">
             {associations.map((logo) => (
               <img
                 key={logo.src}
@@ -115,6 +116,15 @@ export default function Media() {
                 className={`w-auto object-contain ${logo.className}`}
               />
             ))}
+          </div>
+
+          <div className="mt-14 text-center">
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center rounded-full bg-neutral-800 px-12 py-4 text-sm font-bold uppercase tracking-[0.12em] text-white transition hover:bg-black"
+            >
+              Get In Touch
+            </Link>
           </div>
         </div>
       </div>
