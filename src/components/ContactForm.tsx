@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import { reportContactFormConversion } from "@/lib/gtag";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
@@ -46,6 +47,7 @@ export default function ContactForm() {
         throw new Error(message);
       }
       setStatus("success");
+      reportContactFormConversion();
       form.reset();
     } catch (err) {
       setStatus("error");
