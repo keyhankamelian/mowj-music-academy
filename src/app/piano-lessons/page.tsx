@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import Hero from "@/components/Hero";
 import ImageBox from "@/components/ImageBox";
+import Reveal from "@/components/Reveal";
 import WhyMowj from "@/components/sections/WhyMowj";
 import OnlineLessons from "@/components/sections/OnlineLessons";
 import LessonRates from "@/components/sections/LessonRates";
@@ -53,6 +54,7 @@ export default function PianoLessons() {
       </Hero>
 
       {/* Meet Your Instructor */}
+      <Reveal>
       <section className="bg-white text-black">
         <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
           <div className="grid items-center gap-12 md:grid-cols-2 md:gap-16">
@@ -99,12 +101,23 @@ export default function PianoLessons() {
           </div>
         </div>
       </section>
+      </Reveal>
 
-      <WhyMowj />
-      <OnlineLessons />
-      <LessonRates />
-      <Testimonials />
-      <Media />
+      <Reveal>
+        <WhyMowj />
+      </Reveal>
+      <Reveal>
+        <OnlineLessons />
+      </Reveal>
+      <Reveal>
+        <LessonRates />
+      </Reveal>
+      <Reveal>
+        <Testimonials />
+      </Reveal>
+      <Reveal>
+        <Media />
+      </Reveal>
     </>
   );
 }
