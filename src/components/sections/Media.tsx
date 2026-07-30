@@ -2,11 +2,15 @@
 import Link from "next/link";
 
 const audioTracks = [
-  { src: "/media/journey.mp3", title: "Journey", credit: "Keyhan Kamelian" },
+  {
+    src: "/media/journey.mp3",
+    title: "Journey",
+    credit: "Performed by Keyhan Kamelian",
+  },
   {
     src: "/media/fantasie-impromptu.mp3",
     title: "Fantasie Impromptu",
-    credit: "Chopin",
+    credit: "Chopin — Performed by Keyhan Kamelian",
   },
 ];
 
