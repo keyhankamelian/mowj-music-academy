@@ -168,7 +168,7 @@ export default function ContactForm() {
           name="lessonFormat"
           rows={4}
           required
-          placeholder="Online or in studio?"
+          placeholder="Online, in-studio, or in-home?"
           className={`${fieldClass} resize-y`}
         />
       </div>

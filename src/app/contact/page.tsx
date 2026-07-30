@@ -6,7 +6,7 @@ import Reveal from "@/components/Reveal";
 export const metadata: Metadata = {
   title: "Contact | Mowj Music Academy",
   description:
-    "Book a complimentary intro call with Mowj Music Academy to start private piano lessons — online (US & Canada) or in-studio (Echo Park, Los Angeles).",
+    "Book a complimentary intro call with Mowj Music Academy to start private piano lessons — online (US & Canada), in-studio (Echo Park, Los Angeles), or in-home (Los Angeles Metro).",
 };
 
 export default function Contact() {

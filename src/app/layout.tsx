@@ -27,11 +27,11 @@ export const metadata: Metadata = {
     template: "%s",
   },
   description:
-    "Private piano lessons with Mowj Music Academy — online (US & Canada) and in-studio (Echo Park, Los Angeles). Personalized, one-on-one instruction for all levels and ages.",
+    "Private piano lessons with Mowj Music Academy — online (US & Canada), in-studio (Echo Park, Los Angeles), and in-home (Los Angeles Metro). Personalized, one-on-one instruction for all levels and ages.",
   openGraph: {
     title: "Mowj Music Academy | Private Piano Lessons",
     description:
-      "Private piano lessons — online (US & Canada) and in-studio (Echo Park, Los Angeles). Personalized, one-on-one instruction for all levels and ages.",
+      "Private piano lessons — online (US & Canada), in-studio (Echo Park, Los Angeles), and in-home (Los Angeles Metro). Personalized, one-on-one instruction for all levels and ages.",
     url: "https://www.mowjmusicacademy.com",
     siteName: "Mowj Music Academy",
     type: "website",

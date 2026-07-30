@@ -13,7 +13,7 @@ import Media from "@/components/sections/Media";
 export const metadata: Metadata = {
   title: "Piano Lessons | Mowj Music Academy",
   description:
-    "Private piano lessons in all styles, for all levels and ages — online (US & Canada) and in-studio (Echo Park, Los Angeles). Meet your instructor, Keyhan Kamelian.",
+    "Private piano lessons in all styles, for all levels and ages — online (US & Canada), in-studio (Echo Park, Los Angeles), and in-home (Los Angeles Metro). Meet your instructor, Keyhan Kamelian.",
 };
 
 export default function PianoLessons() {
@@ -27,6 +27,7 @@ export default function PianoLessons() {
         <div className="mt-12 space-y-5 font-display text-lg font-bold uppercase tracking-wide sm:text-xl">
           <p>Online (US &amp; Canada)</p>
           <p>In-Studio (Echo Park, Los Angeles)</p>
+          <p>In-Home (Los Angeles Metro)</p>
         </div>
 
         <div className="mx-auto mt-12 max-w-2xl space-y-8 text-base font-semibold leading-relaxed text-white/90 sm:text-lg">

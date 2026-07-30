@@ -15,6 +15,7 @@ export default function Home() {
       <div className="mt-10 space-y-5 font-display text-lg font-bold uppercase tracking-wide sm:text-xl">
         <p>Online (US &amp; Canada)</p>
         <p>In-Studio (Echo Park, Los Angeles)</p>
+        <p>In-Home (Los Angeles Metro)</p>
       </div>
 
       <p className="mx-auto mt-14 max-w-xl text-base font-semibold text-white/90 sm:text-lg">

@@ -11,6 +11,14 @@ const columns: { title: string; items: string[] }[] = [
       "60 Minute Lesson | $130",
     ],
   },
+  {
+    title: "In-Home (Los Angeles Metro)",
+    items: [
+      "30 Minute Lesson | $125",
+      "45 Minute Lesson | $150",
+      "60 Minute Lesson | $180",
+    ],
+  },
 ];
 
 export default function LessonRates() {
@@ -21,7 +29,7 @@ export default function LessonRates() {
           Lesson Rates
         </h2>
 
-        <div className="mx-auto mt-14 grid max-w-3xl gap-12 sm:grid-cols-2">
+        <div className="mx-auto mt-14 grid max-w-5xl gap-12 sm:grid-cols-3">
           {columns.map((col) => (
             <div key={col.title}>
               <h3 className="font-display text-xl font-extrabold uppercase tracking-tight underline decoration-2 underline-offset-4 sm:text-2xl">
@@ -38,6 +46,7 @@ export default function LessonRates() {
 
         <div className="mt-16 space-y-4 text-sm text-black/70 sm:text-base">
           <p>4 lessons per month, scheduled weekly.</p>
+          <p>In-Home rates include a flat $50 travel fee.</p>
           <p className="italic">All Rates in USD.</p>
         </div>
       </div>
