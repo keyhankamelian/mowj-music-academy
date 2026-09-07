@@ -14,9 +14,9 @@ const columns: { title: string; items: string[] }[] = [
   {
     title: "In-Home (Los Angeles Metro)",
     items: [
-      "30 Minute Lesson | $125",
-      "45 Minute Lesson | $150",
-      "60 Minute Lesson | $180",
+      "30 Minute Lesson | $75",
+      "45 Minute Lesson | $100",
+      "60 Minute Lesson | $130",
     ],
   },
 ];
@@ -46,7 +46,11 @@ export default function LessonRates() {
 
         <div className="mt-16 space-y-4 text-sm text-black/70 sm:text-base">
           <p>4 lessons per month, scheduled weekly.</p>
-          <p>In-Home rates include a flat $50 travel fee.</p>
+          <p>
+            In-Home lessons within 3 miles of the studio have no travel fee.
+            Beyond 3 miles, a travel fee applies based on distance and is
+            confirmed during your intro call.
+          </p>
           <p className="italic">All Rates in USD.</p>
         </div>
       </div>
