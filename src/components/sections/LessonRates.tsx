@@ -1,22 +1,22 @@
 const columns: { title: string; items: string[] }[] = [
   {
     title: "Online (US & Canada)",
-    items: ["30 Minute Lesson | $75", "45 Minute Lesson | $100"],
+    items: ["30 Minute Lesson | $70", "45 Minute Lesson | $90"],
   },
   {
     title: "In-Studio (Echo Park, Los Angeles)",
     items: [
-      "30 Minute Lesson | $75",
-      "45 Minute Lesson | $100",
-      "60 Minute Lesson | $130",
+      "30 Minute Lesson | $70",
+      "45 Minute Lesson | $90",
+      "60 Minute Lesson | $110",
     ],
   },
   {
     title: "In-Home (Los Angeles Metro)",
     items: [
-      "30 Minute Lesson | $75",
-      "45 Minute Lesson | $100",
-      "60 Minute Lesson | $130",
+      "30 Minute Lesson | $70",
+      "45 Minute Lesson | $90",
+      "60 Minute Lesson | $110",
     ],
   },
 ];
@@ -48,8 +48,7 @@ export default function LessonRates() {
           <p>4 lessons per month, scheduled weekly.</p>
           <p>
             In-Home lessons within 3 miles of the studio have no travel fee.
-            Beyond 3 miles, a travel fee applies based on distance and is
-            confirmed during your intro call.
+            Beyond 3 miles, a flat $25 travel fee applies.
           </p>
           <p className="italic">All Rates in USD.</p>
         </div>
