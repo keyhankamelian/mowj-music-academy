@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import Link from "next/link";
 
 const audioTracks = [
   {
@@ -11,24 +10,6 @@ const audioTracks = [
     src: "/media/fantasie-impromptu.mp3",
     title: "Fantasie Impromptu",
     credit: "Chopin — Performed by Keyhan Kamelian",
-  },
-];
-
-const associations = [
-  {
-    src: "/images/associations/berklee.png",
-    alt: "Berklee College of Music",
-    className: "h-[72px]",
-  },
-  {
-    src: "/images/associations/steinway.png",
-    alt: "Steinway & Sons — Teacher & Educational Partner",
-    className: "h-[104px]",
-  },
-  {
-    src: "/images/associations/trinity.png",
-    alt: "Trinity Guildhall — part of Trinity College London",
-    className: "h-[62px]",
   },
 ];
 
@@ -107,34 +88,6 @@ export default function Media() {
               Sia &mdash; &ldquo;Helium&rdquo; (feat. Stephanie James)
             </figcaption>
           </figure>
-        </div>
-
-        {/* Call to action + associations */}
-        <div className="mt-20 border-t border-black/10 pt-16">
-          <div className="text-center">
-            <h3 className="font-display text-3xl font-extrabold uppercase tracking-tight sm:text-4xl">
-              Begin Your Piano Journey
-            </h3>
-            <div className="mt-8">
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-full bg-neutral-800 px-12 py-4 text-sm font-bold uppercase tracking-[0.12em] text-white transition hover:bg-black"
-              >
-                Get In Touch
-              </Link>
-            </div>
-          </div>
-
-          <div className="mx-auto mt-16 grid max-w-3xl grid-cols-1 items-center justify-items-center gap-10 sm:grid-cols-3">
-            {associations.map((logo) => (
-              <img
-                key={logo.src}
-                src={logo.src}
-                alt={logo.alt}
-                className={`w-auto object-contain ${logo.className}`}
-              />
-            ))}
-          </div>
         </div>
       </div>
     </section>
