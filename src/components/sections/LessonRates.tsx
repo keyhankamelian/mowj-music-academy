@@ -1,24 +1,7 @@
-const columns: { title: string; items: string[] }[] = [
-  {
-    title: "Online (US & Canada)",
-    items: ["30 Minute Lesson | $70", "45 Minute Lesson | $90"],
-  },
-  {
-    title: "In-Studio (Echo Park, Los Angeles)",
-    items: [
-      "30 Minute Lesson | $70",
-      "45 Minute Lesson | $90",
-      "60 Minute Lesson | $110",
-    ],
-  },
-  {
-    title: "In-Home (Los Angeles Metro)",
-    items: [
-      "30 Minute Lesson | $70",
-      "45 Minute Lesson | $90",
-      "60 Minute Lesson | $110",
-    ],
-  },
+const rates = [
+  "30 Minute Lesson | $70",
+  "45 Minute Lesson | $90",
+  "60 Minute Lesson | $110",
 ];
 
 export default function LessonRates() {
@@ -28,24 +11,20 @@ export default function LessonRates() {
         <h2 className="font-display text-4xl font-extrabold uppercase tracking-tight sm:text-5xl">
           Lesson Rates
         </h2>
+        <p className="mt-4 text-sm font-semibold uppercase tracking-wide text-black/60 sm:text-base">
+          Online (US &amp; Canada) &middot; In-Studio (Echo Park, Los
+          Angeles) &middot; In-Home (Los Angeles Metro)
+        </p>
 
-        <div className="mx-auto mt-14 grid max-w-5xl gap-12 sm:grid-cols-3">
-          {columns.map((col) => (
-            <div key={col.title}>
-              <h3 className="font-display text-xl font-extrabold uppercase tracking-tight underline decoration-2 underline-offset-4 sm:text-2xl">
-                {col.title}
-              </h3>
-              <ul className="mt-6 space-y-4 font-display text-sm font-semibold uppercase tracking-wide text-black/80 sm:text-base">
-                {col.items.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </div>
+        <ul className="mx-auto mt-12 max-w-xs space-y-4 font-display text-lg font-extrabold uppercase tracking-wide sm:text-xl">
+          {rates.map((item) => (
+            <li key={item}>{item}</li>
           ))}
-        </div>
+        </ul>
 
         <div className="mt-16 space-y-4 text-sm text-black/70 sm:text-base">
           <p>4 lessons per month, scheduled weekly.</p>
+          <p>60-minute lessons are available in-studio and in-home only.</p>
           <p>
             In-Home lessons within 3 miles of the studio have no travel fee.
             Beyond 3 miles, a flat $25 travel fee applies.
