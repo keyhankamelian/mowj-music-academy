@@ -26,8 +26,8 @@ export default function LessonRates() {
           <p>4 lessons per month, scheduled weekly.</p>
           <p>60-minute lessons are available in-studio and in-home only.</p>
           <p>
-            In-Home lessons within 3 miles of the studio have no travel fee.
-            Beyond 3 miles, a flat $25 travel fee applies.
+            A flat fee of $25 applies for in-home lessons beyond 3 miles of
+            the studio location.
           </p>
           <p className="italic">All Rates in USD.</p>
         </div>
