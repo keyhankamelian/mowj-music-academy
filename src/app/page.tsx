@@ -19,7 +19,7 @@ export default function Home() {
       </div>
 
       <p className="mx-auto mt-14 max-w-xl text-base font-semibold text-white/90 sm:text-lg">
-        Summer &amp; Fall 2026 Enrollment Now Open. Limited Slots Remain
+        Fall 2026 Enrollment Now Open. Limited Slots Remain
       </p>
 
       <div className="mt-12">

@@ -44,7 +44,7 @@ export default function PianoLessons() {
         </div>
 
         <div className="mt-12 space-y-2 font-display text-lg font-bold sm:text-xl">
-          <p>Summer &amp; Fall 2026 Enrollment Open</p>
+          <p>Fall 2026 Enrollment Open</p>
           <p>Limited Spots Available</p>
         </div>
 
