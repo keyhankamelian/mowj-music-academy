@@ -6,7 +6,6 @@ import Reveal from "@/components/Reveal";
 import WhyMowj from "@/components/sections/WhyMowj";
 import OnlineLessons from "@/components/sections/OnlineLessons";
 import LessonRates from "@/components/sections/LessonRates";
-import PianoStudio from "@/components/sections/PianoStudio";
 import Testimonials from "@/components/sections/Testimonials";
 import Media from "@/components/sections/Media";
 
@@ -113,9 +112,6 @@ export default function PianoLessons() {
       </Reveal>
       <Reveal>
         <LessonRates />
-      </Reveal>
-      <Reveal>
-        <PianoStudio />
       </Reveal>
       <Reveal>
         <Testimonials />
