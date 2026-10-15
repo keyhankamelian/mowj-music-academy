@@ -55,12 +55,12 @@ export default function Footer() {
 
         <div className="border-t border-black/15" />
         <div className="grid gap-12 py-14 md:grid-cols-2 md:items-center">
-          <nav className="flex flex-col items-center gap-4 md:items-start">
+          <nav className="flex flex-col items-center gap-1 md:items-start">
             {footerNav.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-lg underline decoration-1 underline-offset-4 transition-opacity hover:opacity-60"
+                className="py-1.5 text-lg underline decoration-1 underline-offset-4 transition-opacity hover:opacity-60"
               >
                 {item.label}
               </Link>

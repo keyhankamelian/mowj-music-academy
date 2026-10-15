@@ -12,10 +12,10 @@ const FORMSPREE_ID = process.env.NEXT_PUBLIC_FORMSPREE_ID ?? "xvzjvloe";
 const ENDPOINT = `https://formspree.io/f/${FORMSPREE_ID}`;
 
 const fieldClass =
-  "w-full rounded-lg border border-black/10 bg-neutral-200/70 px-4 py-3 text-black outline-none transition focus:border-black/60 focus:bg-white";
+  "w-full rounded-lg border border-black/10 bg-neutral-200/70 px-4 py-3 text-black outline-none placeholder:text-black/60 transition focus:border-black/60 focus:bg-white";
 
 const labelClass = "mb-1.5 block text-sm font-bold";
-const requiredHint = <span className="font-normal text-black/50"> (required)</span>;
+const requiredHint = <span className="font-normal text-black/60"> (required)</span>;
 
 export default function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");

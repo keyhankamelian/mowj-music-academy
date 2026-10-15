@@ -6,7 +6,7 @@ export default function OnlineLessons() {
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-16 md:grid-cols-2 md:gap-16 md:py-24">
         {/* Copy */}
         <div className="text-center">
-          <h2 className="font-display text-3xl font-extrabold uppercase tracking-tight sm:text-4xl">
+          <h2 className="section-title font-display font-extrabold uppercase tracking-tight">
             Online Lessons That Feel In-Person
           </h2>
           <div className="mx-auto mt-8 max-w-md space-y-6 text-base leading-relaxed text-black/80 sm:text-lg">

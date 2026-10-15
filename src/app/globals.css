@@ -31,6 +31,23 @@ h4 {
   letter-spacing: 0.01em;
 }
 
+/* Cormorant's default numerals are old-style (a "0" looks like a small "o"),
+   which is hard to read in prices and dates. Use lining figures instead. */
+h1,
+h2,
+h3,
+h4,
+.font-display {
+  font-variant-numeric: lining-nums;
+}
+
+/* One size for every section title, fluid between phone and desktop. */
+.section-title {
+  font-size: clamp(2.25rem, 1.75rem + 2.2vw, 3rem);
+  line-height: 1.05;
+  text-wrap: balance;
+}
+
 /* White rounded "pill" call-to-action button (LEARN MORE / GET IN TOUCH) */
 .pill-btn {
   display: inline-flex;
@@ -42,7 +59,7 @@ h4 {
   padding: 1rem 2.75rem;
   font-family: var(--font-body), system-ui, sans-serif;
   font-weight: 700;
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   transition: background-color 0.2s ease, transform 0.2s ease;

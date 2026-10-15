@@ -54,13 +54,13 @@ export default function WhyMowj() {
 
         {/* Copy */}
         <div className="px-6 py-16 text-center md:px-14 md:py-24">
-          <h2 className="font-display text-4xl font-extrabold uppercase tracking-tight sm:text-5xl">
+          <h2 className="section-title font-display font-extrabold uppercase tracking-tight">
             Why Mowj?
           </h2>
           <div className="mx-auto mt-10 max-w-md space-y-7 text-base leading-relaxed text-black/80 sm:text-lg">
             {features.map((f) => (
               <p key={f.title}>
-                <span className="font-display font-bold text-black">
+                <span className="font-display text-[1.15em] font-bold leading-none text-black">
                   {f.title}
                 </span>{" "}
                 &ndash; {f.body}

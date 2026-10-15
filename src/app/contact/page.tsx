@@ -22,7 +22,7 @@ export default function Contact() {
         <section className="bg-white text-black">
           <div className="mx-auto max-w-2xl px-6 py-16 md:py-24">
             <div className="text-center">
-              <h2 className="font-display text-3xl font-extrabold uppercase tracking-tight sm:text-4xl md:text-5xl">
+              <h2 className="section-title font-display font-extrabold uppercase tracking-tight">
                 Begin Your Piano Journey
               </h2>
               <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-black/80 sm:text-lg">

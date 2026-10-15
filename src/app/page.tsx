@@ -12,7 +12,7 @@ export default function Home() {
         Private Piano Lessons
       </p>
 
-      <div className="mt-10 space-y-5 font-display text-lg font-bold uppercase tracking-wide sm:text-xl">
+      <div className="mt-10 space-y-5 text-balance font-display text-xl font-bold uppercase tracking-wide sm:text-2xl">
         <p>Online (US &amp; Canada)</p>
         <p>In-Studio (Echo Park, Los Angeles)</p>
         <p>In-Home (Los Angeles Metro)</p>

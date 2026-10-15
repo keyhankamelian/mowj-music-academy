@@ -23,7 +23,7 @@ export default function PianoLessons() {
           Private Piano Lessons
         </h1>
 
-        <div className="mt-12 space-y-5 font-display text-lg font-bold uppercase tracking-wide sm:text-xl">
+        <div className="mt-12 space-y-5 text-balance font-display text-xl font-bold uppercase tracking-wide sm:text-2xl">
           <p>Online (US &amp; Canada)</p>
           <p>In-Studio (Echo Park, Los Angeles)</p>
           <p>In-Home (Los Angeles Metro)</p>
@@ -42,7 +42,7 @@ export default function PianoLessons() {
           </p>
         </div>
 
-        <div className="mt-12 space-y-2 font-display text-lg font-bold sm:text-xl">
+        <div className="mt-12 space-y-2 font-display text-xl font-bold sm:text-2xl">
           <p>Fall 2026 Enrollment Open</p>
           <p>Limited Spots Available</p>
         </div>
@@ -60,7 +60,7 @@ export default function PianoLessons() {
         <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
           <div className="grid items-center gap-12 md:grid-cols-2 md:gap-16">
             <div>
-              <h2 className="font-display text-3xl font-extrabold uppercase tracking-tight sm:text-4xl">
+              <h2 className="section-title font-display font-extrabold uppercase tracking-tight">
                 Meet Your Instructor
               </h2>
               <p className="mt-4 font-display text-xl font-bold uppercase tracking-wide text-black/80">

@@ -10,23 +10,30 @@ export default function LessonRates() {
   return (
     <section className="bg-white text-black">
       <div className="mx-auto max-w-6xl px-6 py-16 text-center md:py-24">
-        <h2 className="font-display text-4xl font-extrabold uppercase tracking-tight sm:text-5xl">
+        <h2 className="section-title font-display font-extrabold uppercase tracking-tight">
           Lesson Rates
         </h2>
-        <p className="mt-4 text-sm font-semibold uppercase tracking-wide text-black/60 sm:text-base">
-          Online (US &amp; Canada) &middot; In-Studio (Echo Park, Los
-          Angeles) &middot; In-Home (Los Angeles Metro)
+        <p className="mt-4 flex flex-col items-center gap-1 text-sm font-semibold uppercase tracking-wide text-black/70 sm:flex-row sm:justify-center sm:gap-0 sm:text-base">
+          <span>Online (US &amp; Canada)</span>
+          <span aria-hidden="true" className="hidden px-2 sm:inline">
+            &middot;
+          </span>
+          <span>In-Studio (Echo Park, Los Angeles)</span>
+          <span aria-hidden="true" className="hidden px-2 sm:inline">
+            &middot;
+          </span>
+          <span>In-Home (Los Angeles Metro)</span>
         </p>
 
         <ul className="mx-auto mt-12 max-w-md space-y-8">
           {rates.map((rate) => (
             <li key={rate.length}>
-              <div className="font-display text-lg font-extrabold uppercase tracking-wide sm:text-xl">
+              <div className="font-display text-xl font-extrabold uppercase tracking-wide sm:text-2xl">
                 {rate.length}
               </div>
               <div className="mt-1.5 text-base text-black/75 sm:text-lg">
                 ${rate.price} per lesson
-                <span className="px-2 text-black/50">&middot;</span>
+                <span aria-hidden="true" className="px-2 text-black/50">&middot;</span>
                 <span className="font-bold text-black">
                   ${rate.price * LESSONS_PER_MONTH} per month
                 </span>
@@ -35,7 +42,7 @@ export default function LessonRates() {
           ))}
         </ul>
 
-        <div className="mt-16 space-y-4 text-sm text-black/70 sm:text-base">
+        <div className="mt-16 space-y-4 text-[15px] leading-relaxed text-black/75 sm:text-base">
           <p>
             Monthly price is based on {LESSONS_PER_MONTH} lessons per month,
             scheduled weekly.

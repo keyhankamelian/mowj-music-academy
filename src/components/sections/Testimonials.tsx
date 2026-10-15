@@ -25,7 +25,7 @@ export default function Testimonials() {
       <WaveDivider position="top" className="z-10 h-16 sm:h-24 md:h-28" />
 
       <div className="relative z-10 mx-auto max-w-6xl px-6 py-32 md:py-40">
-        <h2 className="text-center font-display text-3xl font-extrabold uppercase tracking-tight sm:text-4xl md:text-5xl">
+        <h2 className="section-title text-center font-display font-extrabold uppercase tracking-tight">
           Student Testimonials
         </h2>
 

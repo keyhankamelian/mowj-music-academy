@@ -17,7 +17,7 @@ export default function Media() {
   return (
     <section className="bg-white text-black">
       <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
-        <h2 className="text-center font-display text-4xl font-extrabold uppercase tracking-tight sm:text-5xl">
+        <h2 className="section-title text-center font-display font-extrabold uppercase tracking-tight">
           Media
         </h2>
 
@@ -32,7 +32,7 @@ export default function Media() {
                 <span className="font-display text-2xl font-bold">
                   {track.title}
                 </span>
-                <span className="ml-2 text-sm text-black/55">
+                <span className="ml-2 text-sm text-black/70">
                   {track.credit}
                 </span>
               </figcaption>
@@ -56,7 +56,7 @@ export default function Media() {
               <source src="/media/dhruv-tragedy.mp4" type="video/mp4" />
               Your browser does not support the video element.
             </video>
-            <figcaption className="mt-3 text-center text-sm text-black/55">
+            <figcaption className="mt-3 text-center text-sm text-black/70">
               Dhruv &mdash; &ldquo;Tragedy&rdquo; (Jimmy Kimmel Live)
             </figcaption>
           </figure>
@@ -69,7 +69,7 @@ export default function Media() {
                 className="h-full w-full object-cover"
               />
             </div>
-            <figcaption className="mt-3 text-center text-sm text-black/55">
+            <figcaption className="mt-3 text-center text-sm text-black/70">
               Fiji Blue US Tour &mdash; The Roxy
             </figcaption>
           </figure>
@@ -84,7 +84,7 @@ export default function Media() {
               <source src="/media/sia-helium.mp4" type="video/mp4" />
               Your browser does not support the video element.
             </video>
-            <figcaption className="mt-3 text-center text-sm text-black/55">
+            <figcaption className="mt-3 text-center text-sm text-black/70">
               Sia &mdash; &ldquo;Helium&rdquo; (feat. Stephanie James)
             </figcaption>
           </figure>

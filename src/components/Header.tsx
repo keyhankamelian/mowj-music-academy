@@ -19,7 +19,7 @@ export default function Header() {
         <Link href="/" aria-label="Mowj Music Academy — home">
           <Logo variant="light" size="md" />
         </Link>
-        <nav className="flex items-center gap-6 text-sm tracking-wide text-white/85 sm:gap-9">
+        <nav className="flex items-center gap-6 text-[15px] font-semibold tracking-wide text-white/90 sm:gap-9 sm:text-base">
           {nav.map((item) => {
             const active =
               item.href === "/"
@@ -29,7 +29,7 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`pb-0.5 transition-colors hover:text-white ${
+                className={`relative pb-0.5 transition-colors before:absolute before:-inset-x-2 before:-inset-y-3 before:content-[''] hover:text-white ${
                   active
                     ? "border-b border-white text-white"
                     : "border-b border-transparent"
