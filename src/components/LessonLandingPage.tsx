@@ -5,6 +5,7 @@ import ContactForm from "@/components/ContactForm";
 import LessonRates, {
   lessonLengthOptions,
 } from "@/components/sections/LessonRates";
+import MeetInstructor from "@/components/sections/MeetInstructor";
 import Testimonials from "@/components/sections/Testimonials";
 
 /**
@@ -75,6 +76,10 @@ export default function LessonLandingPage({
             ))}
           </div>
         </section>
+      </Reveal>
+
+      <Reveal>
+        <MeetInstructor />
       </Reveal>
 
       {details && <Reveal>{details}</Reveal>}
