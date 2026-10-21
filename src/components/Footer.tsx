@@ -13,17 +13,17 @@ const associations = [
   {
     src: "/images/associations/berklee.png",
     alt: "Berklee College of Music",
-    className: "h-[72px]",
+    className: "h-12 md:h-16",
   },
   {
     src: "/images/associations/steinway.png",
     alt: "Steinway & Sons — Teacher & Educational Partner",
-    className: "h-[104px]",
+    className: "h-16 md:h-[84px]",
   },
   {
     src: "/images/associations/trinity.png",
     alt: "Trinity Guildhall — part of Trinity College London",
-    className: "h-[62px]",
+    className: "h-10 md:h-14",
   },
 ];
 
@@ -32,25 +32,9 @@ export default function Footer() {
     <footer className="bg-white text-black">
       <div className="mx-auto max-w-6xl px-6">
         <div className="border-t border-black/15" />
+        <GetInTouchButton />
 
-        {/* Call to action + associations */}
-        <div className="py-14 text-center">
-          <GetInTouchButton />
-
-          <div className="mx-auto grid max-w-3xl grid-cols-1 items-center justify-items-center gap-10 sm:grid-cols-3">
-            {associations.map((logo) => (
-              <img
-                key={logo.src}
-                src={logo.src}
-                alt={logo.alt}
-                className={`w-auto object-contain ${logo.className}`}
-              />
-            ))}
-          </div>
-        </div>
-
-        <div className="border-t border-black/15" />
-        <div className="grid gap-12 py-14 md:grid-cols-2 md:items-center">
+        <div className="grid gap-12 py-14 md:grid-cols-[1fr_auto_1fr] md:items-center">
           <nav className="flex flex-col items-center gap-1 md:items-start">
             {footerNav.map((item) => (
               <Link
@@ -62,6 +46,19 @@ export default function Footer() {
               </Link>
             ))}
           </nav>
+
+          {/* Associations — grayscale to match the monochrome brand */}
+          <div className="flex items-center justify-center gap-7 sm:gap-12">
+            {associations.map((logo) => (
+              <img
+                key={logo.src}
+                src={logo.src}
+                alt={logo.alt}
+                className={`w-auto object-contain opacity-90 grayscale ${logo.className}`}
+              />
+            ))}
+          </div>
+
           <div className="flex justify-center md:justify-end">
             <Logo variant="dark" size="lg" />
           </div>

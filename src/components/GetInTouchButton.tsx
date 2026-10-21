@@ -9,7 +9,7 @@ export default function GetInTouchButton() {
   if (pathname.startsWith("/contact")) return null;
 
   return (
-    <div className="mb-12">
+    <div className="border-b border-black/15 py-20 text-center">
       <Link
         href="/contact"
         className="inline-flex items-center justify-center rounded-full bg-neutral-800 px-12 py-4 text-sm font-bold uppercase tracking-[0.12em] text-white transition hover:bg-black"
