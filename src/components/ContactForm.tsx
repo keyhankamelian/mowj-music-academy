@@ -193,9 +193,11 @@ export default function ContactForm({
             Choose one
           </option>
           <option value="As soon as possible">As soon as possible</option>
+          <option value="Within the next few weeks">
+            Within the next few weeks
+          </option>
           <option value="Within the next month">Within the next month</option>
           <option value="In 1–3 months">In 1–3 months</option>
-          <option value="Just exploring for now">Just exploring for now</option>
         </select>
       </div>
 
