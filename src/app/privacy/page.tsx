@@ -37,8 +37,9 @@ export default function Privacy() {
           <h2 className={sectionTitle}>Information You Give Us</h2>
           <p>
             When you fill out a contact or booking form, we collect what you
-            enter: your name, email, phone number, city, musical level,
-            preferred lesson format or length, and any notes you add. If you
+            enter: your name, email, phone number, musical level, when
+            you&rsquo;d like to start, preferred lesson format or length, and
+            any notes you add. If you
             arrive from an ad, we also record which campaign and ad led you to
             the form.
           </p>

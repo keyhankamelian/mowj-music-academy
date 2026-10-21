@@ -165,20 +165,6 @@ export default function ContactForm({
       </div>
 
       <div>
-        <label htmlFor="city" className={labelClass}>
-          City{requiredHint}
-        </label>
-        <input
-          id="city"
-          name="city"
-          type="text"
-          required
-          autoComplete="address-level2"
-          className={fieldClass}
-        />
-      </div>
-
-      <div>
         <label htmlFor="musicalLevel" className={labelClass}>
           Musical Level{requiredHint}
         </label>
@@ -190,6 +176,27 @@ export default function ContactForm({
           placeholder="Beginner, intermediate, advanced…"
           className={fieldClass}
         />
+      </div>
+
+      <div>
+        <label htmlFor="startTimeline" className={labelClass}>
+          How Soon Would You Like to Start?{requiredHint}
+        </label>
+        <select
+          id="startTimeline"
+          name="startTimeline"
+          required
+          defaultValue=""
+          className={fieldClass}
+        >
+          <option value="" disabled>
+            Choose one
+          </option>
+          <option value="As soon as possible">As soon as possible</option>
+          <option value="Within the next month">Within the next month</option>
+          <option value="In 1–3 months">In 1–3 months</option>
+          <option value="Just exploring for now">Just exploring for now</option>
+        </select>
       </div>
 
       {lessonFormat ? (
