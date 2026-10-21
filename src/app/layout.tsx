@@ -38,6 +38,10 @@ export const metadata: Metadata = {
     siteName: "Mowj Music Academy",
     type: "website",
   },
+  other: {
+    // Meta Business domain verification for mowjmusicacademy.com
+    "facebook-domain-verification": "gjufkw9wxq0xpjpd7n3pnmxdt1qtt8",
+  },
 };
 
 export default function RootLayout({
