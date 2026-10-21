@@ -1,9 +1,9 @@
 const LESSONS_PER_MONTH = 4;
 
 const rates = [
-  { length: "30 Minute Lesson", price: 70 },
-  { length: "45 Minute Lesson", price: 90 },
-  { length: "60 Minute Lesson", price: 110 },
+  { length: "30 Minute Lesson", price: 80 },
+  { length: "45 Minute Lesson", price: 105 },
+  { length: "60 Minute Lesson", price: 130 },
 ];
 
 export default function LessonRates() {
@@ -19,10 +19,6 @@ export default function LessonRates() {
             &middot;
           </span>
           <span>In-Studio (Echo Park, Los Angeles)</span>
-          <span aria-hidden="true" className="hidden px-2 sm:inline">
-            &middot;
-          </span>
-          <span>In-Home (Los Angeles Metro)</span>
         </p>
 
         <ul className="mx-auto mt-12 max-w-md space-y-8">
@@ -47,11 +43,7 @@ export default function LessonRates() {
             Monthly price is based on {LESSONS_PER_MONTH} lessons per month,
             scheduled weekly.
           </p>
-          <p>60-minute lessons are available in-studio and in-home only.</p>
-          <p>
-            A flat fee of $25 applies for in-home lessons beyond 3 miles of
-            the studio location.
-          </p>
+          <p>60-minute lessons are available in-studio only.</p>
           <p className="italic">All Rates in USD.</p>
         </div>
       </div>
