@@ -169,7 +169,7 @@ Add these to the online ad set next to Ad 2 (`03-ad-online`), with the 9:16 vers
 
 ### Ad 9 — "A video can't hear you play." · `export/11-ad-online-video.png`
 - **Primary text:** You can learn a lot from tutorials and apps. But they can't hear the wrong note, fix your hand position, or tell you why that passage keeps falling apart.
-  Live, one-on-one online lessons with real-time feedback, from a Berklee-trained instructor. Anywhere in the US & Canada. Limited spots remain for Fall 2026 enrollment.
+  Live, one-on-one online lessons with real-time feedback, from a Steinway Educational Partner. Anywhere in the US & Canada. Limited spots remain for Fall 2026 enrollment.
 - **Headline:** A Real Teacher, Live Online
 - **Description:** Live online lessons · US & Canada
 - **CTA button:** Learn More
