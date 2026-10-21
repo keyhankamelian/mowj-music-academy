@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Mowj — Ad: Your Seat Is Still Here</title>
+<script>if (location.hash === "#story") document.documentElement.classList.add("story");</script>
+<link rel="stylesheet" href="base.css" />
+<style>
+  .post { background: #0a0a0a; }
+  .top { position: absolute; left: 0; top: 0; width: 1080px; height: 780px; }
+  .top .photo { object-position: 50% 60%; }
+  .top .shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.72) 0%, rgba(0,0,0,.35) 18%, rgba(0,0,0,0) 34%); }
+  .top .logo { position: absolute; top: 56px; left: 50%; transform: translateX(-50%); height: 110px; z-index: 2; }
+  .bottom { position: absolute; left: 0; right: 0; top: 770px; bottom: 0; display: flex; flex-direction: column; align-items: center; padding: 40px 90px 0; }
+  .title { font-size: 100px; }
+  .tag { margin-top: 26px; font-size: 28px; line-height: 1.45; color: rgba(255,255,255,.85); max-width: 820px; text-wrap: balance; }
+  .pill { margin-top: 38px; }
+  .limited { margin-top: 26px; font-size: 32px; font-style: italic; font-weight: 500; opacity: 0.85; }
+
+  /* 9:16 Stories / Reels */
+  .story .top { height: 1010px; }
+  .story .top .shade { background: linear-gradient(180deg, rgba(0,0,0,.6) 0%, rgba(0,0,0,.55) 20%, rgba(0,0,0,.3) 34%, rgba(0,0,0,0) 46%); }
+  .story .top .logo { top: 270px; }
+  .story .bottom { top: 996px; }
+</style>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute">
+    <defs>
+      <clipPath id="waveBottom" clipPathUnits="objectBoundingBox">
+        <path d="M0,0 H1 V0.9 C0.66667,1.0 0.33333,1.0 0,0.9 Z" />
+      </clipPath>
+    </defs>
+  </svg>
+  <div class="post hero-gradient">
+    <div class="top wave-bottom">
+      <img class="photo" src="assets/empty-bench.jpg" alt="" />
+      <div class="shade"></div>
+      <img class="logo" src="assets/logo-white.webp" alt="" />
+    </div>
+    <div class="bottom">
+      <h1 class="title">Your seat is<br />still here.</h1>
+      <p class="tag">It&rsquo;s not too late to come back to piano. Private lessons for adults, online or in Echo Park.</p>
+      <span class="pill light">Book Your Trial Lesson</span>
+      <p class="limited serif">Limited spots remain for Fall 2026</p>
+    </div>
+  </div>
+</body>
+</html>

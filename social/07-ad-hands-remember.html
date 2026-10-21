@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Mowj — Ad: Your Hands Remember</title>
+<script>if (location.hash === "#story") document.documentElement.classList.add("story");</script>
+<link rel="stylesheet" href="base.css" />
+<style>
+  .photo { opacity: 0.7; object-position: 40% 50%; }
+  .shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.6) 0%, rgba(0,0,0,.2) 30%, rgba(0,0,0,.35) 55%, rgba(0,0,0,.9) 100%); }
+  .content { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; align-items: center; padding: 96px 90px 84px; }
+  .logo { height: 96px; }
+  .spacer { flex: 1; }
+  .eyebrow { font-size: 22px; color: rgba(255,255,255,.8); }
+  .title { font-size: 104px; margin-top: 28px; }
+  .tag { margin-top: 30px; font-size: 29px; line-height: 1.45; color: rgba(255,255,255,.88); max-width: 800px; text-wrap: balance; }
+  .pill { margin-top: 44px; }
+  .limited { margin-top: 26px; font-size: 32px; font-style: italic; font-weight: 500; opacity: 0.85; }
+
+  /* 9:16 Stories / Reels */
+  .story .content { padding-top: 280px; padding-bottom: 440px; }
+</style>
+</head>
+<body>
+  <div class="post">
+    <img class="photo" src="assets/hands.jpg" alt="" />
+    <div class="shade"></div>
+    <div class="content">
+      <img class="logo" src="assets/logo-white.webp" alt="" />
+      <div class="spacer"></div>
+      <p class="eyebrow">For adults who used to play</p>
+      <h1 class="title">Your hands<br />still&nbsp;remember.</h1>
+      <p class="tag">It&rsquo;s been years, not forever. Private lessons that meet you where you are.</p>
+      <span class="pill light">Book Your Trial Lesson</span>
+      <p class="limited serif">Limited spots remain for Fall 2026</p>
+    </div>
+  </div>
+</body>
+</html>
