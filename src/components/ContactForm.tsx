@@ -2,6 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 import { reportContactFormConversion } from "@/lib/gtag";
+import { reportMetaLead } from "@/lib/metaPixel";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
@@ -48,6 +49,7 @@ export default function ContactForm() {
       }
       setStatus("success");
       reportContactFormConversion();
+      reportMetaLead();
       form.reset();
     } catch (err) {
       setStatus("error");
