@@ -6,7 +6,9 @@
 <script>if (location.hash === "#story") document.documentElement.classList.add("story");</script>
 <link rel="stylesheet" href="base.css" />
 <style>
-  .content { position: relative; height: 100%; display: flex; flex-direction: column; align-items: center; padding: 96px 90px 84px; }
+  .photo { opacity: 0.6; object-position: 40% 50%; filter: blur(2px); }
+  .shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,.45) 35%, rgba(0,0,0,.55) 60%, rgba(0,0,0,.85) 100%); }
+  .content { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; align-items: center; padding: 96px 90px 84px; }
   .logo { height: 96px; }
   .spacer { flex: 1; }
   .eyebrow { font-size: 22px; color: rgba(255,255,255,.75); }
@@ -24,7 +26,9 @@
 </style>
 </head>
 <body>
-  <div class="post hero-gradient">
+  <div class="post">
+    <img class="photo" src="assets/hands.jpg" alt="" />
+    <div class="shade"></div>
     <div class="content">
       <img class="logo" src="assets/logo-white.webp" alt="" />
       <div class="spacer"></div>
