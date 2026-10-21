@@ -137,6 +137,29 @@ Run these as their own ad set, so you can see whether this angle beats the gener
 - **Description:** Private lessons for adults
 - **CTA button:** Sign Up
 
+
+---
+
+## Parent ads — kids & teens, ages 9–18
+
+Add both to the in-studio ad set (and the online one). Keep the benefit claims experiential like this, not scientific ("boosts IQ") — it's more believable and stays clear of Meta's review.
+
+### Ad 7 — "Focus. Confidence. Creativity." · `export/09-ad-parents-benefits.png` (+ `-story`)
+- **Primary text:** Piano teaches what's hard to teach anywhere else: the focus to work through something challenging, the confidence that comes from finally getting it, and the creativity to make it their own.
+  Private, one-on-one lessons for ages 9–18, built around your child's goals and the music they actually want to play. Online or in-studio in Echo Park. Limited spots remain for Fall 2026 enrollment.
+- **Headline:** Piano Lessons for Ages 9–18
+- **Description:** Focus · Confidence · Creativity
+- **CTA button:** Learn More
+- **Ad name:** `parents-benefits`
+
+### Ad 8 — "They'll thank you later." · `export/10-ad-parents-thank-you.png` (+ `-story`)
+- **Primary text:** Ask any adult who quit piano as a kid. Almost all of them wish they'd kept going.
+  Our lessons are built to keep students playing: music they love, steady progress they can feel, and a teacher who makes practice feel worth it. Private lessons for ages 9–18, online or in-studio in Echo Park. Limited spots remain for Fall 2026 enrollment.
+- **Headline:** Give Them Music for Life
+- **Description:** Private lessons for ages 9–18
+- **CTA button:** Learn More
+- **Ad name:** `parents-thank-you`
+
 ---
 
 ## Instant Form (not used: leads go through the website now)
