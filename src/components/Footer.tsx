@@ -66,7 +66,13 @@ export default function Footer() {
       </div>
       <div className="border-t border-black/15">
         <p className="py-6 text-center text-sm font-semibold tracking-wide">
-          © 2026 Mowj Music Academy | All Rights Reserved
+          © 2026 Mowj Music Academy | All Rights Reserved |{" "}
+          <Link
+            href="/privacy"
+            className="underline decoration-1 underline-offset-4 transition-opacity hover:opacity-60"
+          >
+            Privacy Policy
+          </Link>
         </p>
       </div>
     </footer>

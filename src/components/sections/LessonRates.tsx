@@ -1,18 +1,29 @@
 const LESSONS_PER_MONTH = 4;
 
-const rates = [
+export const rates = [
   { length: "30 Minute Lesson", price: 80 },
   { length: "45 Minute Lesson", price: 105 },
   { length: "60 Minute Lesson", price: 130 },
 ];
 
-export default function LessonRates() {
+/** Lesson rate options as "30 Minute Lesson ($80)" for the lead form. */
+export const lessonLengthOptions = rates.map(
+  (rate) => `${rate.length} ($${rate.price})`,
+);
+
+export default function LessonRates({
+  showFormats = true,
+}: {
+  /** List the lesson formats and format notes (off on single-format pages). */
+  showFormats?: boolean;
+}) {
   return (
     <section className="bg-white text-black">
       <div className="mx-auto max-w-6xl px-6 py-16 text-center md:py-24">
         <h2 className="section-title font-display font-extrabold uppercase tracking-tight">
           Lesson Rates
         </h2>
+        {showFormats && (
         <p className="mt-4 flex flex-col items-center gap-1 text-sm font-semibold uppercase tracking-wide text-black/70 sm:flex-row sm:justify-center sm:gap-0 sm:text-base">
           <span>Online (US &amp; Canada)</span>
           <span aria-hidden="true" className="hidden px-2 sm:inline">
@@ -20,6 +31,7 @@ export default function LessonRates() {
           </span>
           <span>In-Studio (Echo Park, Los Angeles)</span>
         </p>
+        )}
 
         <ul className="mx-auto mt-12 max-w-md space-y-8">
           {rates.map((rate) => (
@@ -43,7 +55,9 @@ export default function LessonRates() {
             Monthly price is based on {LESSONS_PER_MONTH} lessons per month,
             scheduled weekly.
           </p>
-          <p>60-minute lessons are available in-studio only.</p>
+          {showFormats && (
+            <p>60-minute lessons are available in-studio only.</p>
+          )}
           <p className="italic">All Rates in USD.</p>
         </div>
       </div>

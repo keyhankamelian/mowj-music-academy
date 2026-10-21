@@ -5,11 +5,17 @@ import { usePathname } from "next/navigation";
 
 /**
  * Footer call-to-action. Hidden on the home page (the hero's Learn More is the
- * CTA there) and on /contact, where the form is already the page.
+ * CTA there), on /contact, and on /lessons/* ad landing pages, which have the
+ * form inline.
  */
 export default function GetInTouchButton() {
   const pathname = usePathname();
-  if (pathname === "/" || pathname.startsWith("/contact")) return null;
+  if (
+    pathname === "/" ||
+    pathname.startsWith("/contact") ||
+    pathname.startsWith("/lessons")
+  )
+    return null;
 
   return (
     <div className="border-b border-black/15 py-20 text-center">

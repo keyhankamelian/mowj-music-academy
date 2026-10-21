@@ -18,7 +18,30 @@ const fieldClass =
 const labelClass = "mb-1.5 block text-sm font-bold";
 const requiredHint = <span className="font-normal text-black/60"> (required)</span>;
 
-export default function ContactForm() {
+// Ad attribution parameters copied from the page URL into each submission, so
+// the lead email shows which campaign and ad it came from.
+const TRACKING_PARAMS = [
+  "utm_source",
+  "utm_medium",
+  "utm_campaign",
+  "utm_content",
+  "utm_term",
+];
+
+type ContactFormProps = {
+  /**
+   * Fixes the lesson format (e.g. on an ad landing page) instead of asking
+   * for it; the form then asks for a preferred lesson length.
+   */
+  lessonFormat?: string;
+  /** Lesson lengths offered when `lessonFormat` is set. */
+  lessonLengths?: string[];
+};
+
+export default function ContactForm({
+  lessonFormat,
+  lessonLengths = [],
+}: ContactFormProps) {
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState<string>("");
 
@@ -28,7 +51,15 @@ export default function ContactForm() {
     setError("");
 
     const form = event.currentTarget;
-    const data = Object.fromEntries(new FormData(form).entries());
+    const data: Record<string, FormDataEntryValue> = Object.fromEntries(
+      new FormData(form).entries(),
+    );
+    const params = new URLSearchParams(window.location.search);
+    for (const key of TRACKING_PARAMS) {
+      const value = params.get(key);
+      if (value) data[key] = value;
+    }
+    data.page = window.location.pathname;
 
     try {
       const res = await fetch(ENDPOINT, {
@@ -161,19 +192,59 @@ export default function ContactForm() {
         />
       </div>
 
-      <div>
-        <label htmlFor="lessonFormat" className={labelClass}>
-          Preferred Lesson Format{requiredHint}
-        </label>
-        <textarea
-          id="lessonFormat"
-          name="lessonFormat"
-          rows={4}
-          required
-          placeholder="Online or in-studio?"
-          className={`${fieldClass} resize-y`}
-        />
-      </div>
+      {lessonFormat ? (
+        <>
+          <input type="hidden" name="lessonFormat" value={lessonFormat} />
+          <div>
+            <label htmlFor="lessonLength" className={labelClass}>
+              Preferred Lesson Length{requiredHint}
+            </label>
+            <select
+              id="lessonLength"
+              name="lessonLength"
+              required
+              defaultValue=""
+              className={fieldClass}
+            >
+              <option value="" disabled>
+                Choose a lesson length
+              </option>
+              {lessonLengths.map((length) => (
+                <option key={length} value={length}>
+                  {length}
+                </option>
+              ))}
+              <option value="Not sure yet">Not sure yet</option>
+            </select>
+          </div>
+          <div>
+            <label htmlFor="notes" className={labelClass}>
+              Anything Else We Should Know?
+            </label>
+            <textarea
+              id="notes"
+              name="notes"
+              rows={3}
+              placeholder="Who the lessons are for, your goals, availability…"
+              className={`${fieldClass} resize-y`}
+            />
+          </div>
+        </>
+      ) : (
+        <div>
+          <label htmlFor="lessonFormat" className={labelClass}>
+            Preferred Lesson Format{requiredHint}
+          </label>
+          <textarea
+            id="lessonFormat"
+            name="lessonFormat"
+            rows={4}
+            required
+            placeholder="Online or in-studio?"
+            className={`${fieldClass} resize-y`}
+          />
+        </div>
+      )}
 
       {status === "error" && (
         <p className="text-sm font-semibold text-red-600">{error}</p>
