@@ -160,6 +160,37 @@ Add both to the in-studio ad set (and the online one). Keep the benefit claims e
 - **CTA button:** Learn More
 - **Ad name:** `parents-thank-you`
 
+
+---
+
+## Online ads — new creatives
+
+Add these to the online ad set next to Ad 2 (`03-ad-online`), with the 9:16 versions from `export/stories/`.
+
+### Ad 9 — "A video can't hear you play." · `export/11-ad-online-video.png`
+- **Primary text:** You can learn a lot from tutorials and apps. But they can't hear the wrong note, fix your hand position, or tell you why that passage keeps falling apart.
+  Live, one-on-one online lessons with real-time feedback, from a Berklee-trained instructor. Anywhere in the US & Canada. Limited spots remain for Fall 2026 enrollment.
+- **Headline:** A Real Teacher, Live Online
+- **Description:** Live online lessons · US & Canada
+- **CTA button:** Learn More
+- **Ad name:** `online-video`
+
+### Ad 10 — "Studio quality. From anywhere." · `export/12-ad-online-studio-quality.png`
+- **Primary text:** Online lessons don't have to feel like a compromise. With a multi-camera setup, you see every hand position up close and every note comes through clearly, so lessons feel like you're in the room.
+  Private, one-on-one lessons for all ages and levels, anywhere in the US & Canada. Limited spots remain for Fall 2026 enrollment.
+- **Headline:** Online Lessons That Feel In-Person
+- **Description:** Multi-camera lessons on Zoom
+- **CTA button:** Learn More
+- **Ad name:** `online-studio-quality`
+
+### Ad 11 — "No commute. No traffic. Just music." · `export/13-ad-online-no-commute.png`
+- **Primary text:** No driving across town, no rushing to make it on time. Just you, your piano, and a lesson built around your goals.
+  Live, one-on-one online piano lessons on your schedule, anywhere in the US & Canada. Limited spots remain for Fall 2026 enrollment.
+- **Headline:** Piano Lessons, From Home
+- **Description:** Live online · On your schedule
+- **CTA button:** Learn More
+- **Ad name:** `online-no-commute`
+
 ---
 
 ## Instant Form (not used: leads go through the website now)
