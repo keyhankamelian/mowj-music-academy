@@ -1,21 +1,26 @@
 const LESSONS_PER_MONTH = 4;
 
 export const rates = [
-  { length: "30 Minute Lesson", price: 80 },
-  { length: "45 Minute Lesson", price: 105 },
-  { length: "60 Minute Lesson", price: 130 },
+  { minutes: 30, length: "30 Minute Lesson", price: 80 },
+  { minutes: 45, length: "45 Minute Lesson", price: 105 },
+  { minutes: 60, length: "60 Minute Lesson", price: 130 },
 ];
 
 /** Lesson rate options as "30 Minute Lesson ($80)" for the lead form. */
-export const lessonLengthOptions = rates.map(
-  (rate) => `${rate.length} ($${rate.price})`,
-);
+export function lessonLengthOptions(minutes?: number[]) {
+  return rates
+    .filter((rate) => !minutes || minutes.includes(rate.minutes))
+    .map((rate) => `${rate.length} ($${rate.price})`);
+}
 
 export default function LessonRates({
   showFormats = true,
+  minutes,
 }: {
   /** List the lesson formats and format notes (off on single-format pages). */
   showFormats?: boolean;
+  /** Only show these lesson lengths (defaults to all). */
+  minutes?: number[];
 }) {
   return (
     <section className="bg-white text-black">
@@ -24,30 +29,32 @@ export default function LessonRates({
           Lesson Rates
         </h2>
         {showFormats && (
-        <p className="mt-4 flex flex-col items-center gap-1 text-sm font-semibold uppercase tracking-wide text-black/70 sm:flex-row sm:justify-center sm:gap-0 sm:text-base">
-          <span>Online (US &amp; Canada)</span>
-          <span aria-hidden="true" className="hidden px-2 sm:inline">
-            &middot;
-          </span>
-          <span>In-Studio (Echo Park, Los Angeles)</span>
-        </p>
+          <p className="mt-4 flex flex-col items-center gap-1 text-sm font-semibold uppercase tracking-wide text-black/70 sm:flex-row sm:justify-center sm:gap-0 sm:text-base">
+            <span>Online (US &amp; Canada)</span>
+            <span aria-hidden="true" className="hidden px-2 sm:inline">
+              &middot;
+            </span>
+            <span>In-Studio (Echo Park, Los Angeles)</span>
+          </p>
         )}
 
         <ul className="mx-auto mt-12 max-w-md space-y-8">
-          {rates.map((rate) => (
-            <li key={rate.length}>
-              <div className="font-display text-xl font-extrabold uppercase tracking-wide sm:text-2xl">
-                {rate.length}
-              </div>
-              <div className="mt-1.5 text-base text-black/75 sm:text-lg">
-                ${rate.price} per lesson
-                <span aria-hidden="true" className="px-2 text-black/50">&middot;</span>
-                <span className="font-bold text-black">
-                  ${rate.price * LESSONS_PER_MONTH} per month
-                </span>
-              </div>
-            </li>
-          ))}
+          {rates
+            .filter((rate) => !minutes || minutes.includes(rate.minutes))
+            .map((rate) => (
+              <li key={rate.length}>
+                <div className="font-display text-xl font-extrabold uppercase tracking-wide sm:text-2xl">
+                  {rate.length}
+                </div>
+                <div className="mt-1.5 text-base text-black/75 sm:text-lg">
+                  ${rate.price} per lesson
+                  <span aria-hidden="true" className="px-2 text-black/50">&middot;</span>
+                  <span className="font-bold text-black">
+                    ${rate.price * LESSONS_PER_MONTH} per month
+                  </span>
+                </div>
+              </li>
+            ))}
         </ul>
 
         <div className="mt-16 space-y-4 text-[15px] leading-relaxed text-black/75 sm:text-base">
