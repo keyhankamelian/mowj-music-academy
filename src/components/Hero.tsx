@@ -15,7 +15,7 @@ export default function Hero({ children }: { children: ReactNode }) {
       <img
         src="/images/hero.jpg"
         alt=""
-        className="absolute inset-0 h-full w-full object-cover opacity-70"
+        className="hero-zoom absolute inset-0 h-full w-full object-cover opacity-70"
       />
       <div aria-hidden className="absolute inset-0 bg-black/55" />
 

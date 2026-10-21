@@ -123,3 +123,72 @@ h4,
     #070708 100%
   );
 }
+
+/* "Arpeggio" reveal: inside a .reveal block, the children of .arpeggio rise
+   in one after another, like the notes of a rolled chord. */
+.reveal .arpeggio > * {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.reveal-visible .arpeggio > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-visible .arpeggio > :nth-child(1) { transition-delay: 0.15s; }
+.reveal-visible .arpeggio > :nth-child(2) { transition-delay: 0.3s; }
+.reveal-visible .arpeggio > :nth-child(3) { transition-delay: 0.45s; }
+.reveal-visible .arpeggio > :nth-child(4) { transition-delay: 0.6s; }
+
+/* Slow "Ken Burns" drift on the hero photo. */
+@keyframes hero-zoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+.hero-zoom {
+  animation: hero-zoom 24s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+/* Wave dividers: the main curve slowly breathes, and a translucent swell
+   behind it drifts side to side, like a calm sea (mowj = wave). */
+@keyframes wave-breathe {
+  from { transform: scaleY(1); }
+  to { transform: scaleY(1.07); }
+}
+@keyframes wave-swell {
+  from { transform: translateX(-2.5%) scaleY(0.92); }
+  to { transform: translateX(2.5%) scaleY(1.1); }
+}
+.wave-main,
+.wave-swell {
+  transform-box: view-box;
+}
+.wave-main {
+  animation: wave-breathe 9s ease-in-out infinite alternate;
+}
+.wave-swell {
+  opacity: 0.35;
+  animation: wave-swell 7s ease-in-out infinite alternate;
+}
+.wave-bottom-edge .wave-main,
+.wave-bottom-edge .wave-swell {
+  transform-origin: 50% 100%;
+}
+.wave-top-edge .wave-main,
+.wave-top-edge .wave-swell {
+  transform-origin: 50% 0%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal .arpeggio > * {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .hero-zoom,
+  .wave-main,
+  .wave-swell {
+    animation: none;
+  }
+}

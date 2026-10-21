@@ -29,7 +29,7 @@ export default function Testimonials() {
           Student Testimonials
         </h2>
 
-        <div className="mt-16 grid gap-14 md:grid-cols-3 md:gap-10">
+        <div className="arpeggio mt-16 grid gap-14 md:grid-cols-3 md:gap-10">
           {testimonials.map((t) => (
             <figure key={t.name} className="text-center">
               <blockquote className="text-base leading-relaxed text-white/90">

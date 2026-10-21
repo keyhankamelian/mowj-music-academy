@@ -63,7 +63,7 @@ export default function LessonLandingPage({
 
       <Reveal>
         <section className="bg-white text-black">
-          <div className="mx-auto grid max-w-6xl gap-12 px-6 pt-16 text-center md:grid-cols-3 md:pt-24">
+          <div className="arpeggio mx-auto grid max-w-6xl gap-12 px-6 pt-16 text-center md:grid-cols-3 md:pt-24">
             {highlights.map((item) => (
               <div key={item.title}>
                 <h2 className="font-display text-xl font-extrabold uppercase tracking-wide sm:text-2xl">

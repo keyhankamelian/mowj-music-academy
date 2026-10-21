@@ -38,7 +38,7 @@ export default function LessonRates({
           </p>
         )}
 
-        <ul className="mx-auto mt-12 max-w-md space-y-8">
+        <ul className="arpeggio mx-auto mt-12 max-w-md space-y-8">
           {rates
             .filter((rate) => !minutes || minutes.includes(rate.minutes))
             .map((rate) => (
