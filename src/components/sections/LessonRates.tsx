@@ -46,12 +46,11 @@ export default function LessonRates({
                 <div className="font-display text-xl font-extrabold uppercase tracking-wide sm:text-2xl">
                   {rate.length}
                 </div>
-                <div className="mt-1.5 text-base text-black/75 sm:text-lg">
+                <div className="mt-1.5 text-lg font-bold sm:text-xl">
                   ${rate.price} per lesson
-                  <span aria-hidden="true" className="px-2 text-black/50">&middot;</span>
-                  <span className="font-bold text-black">
-                    ${rate.price * LESSONS_PER_MONTH} per month
-                  </span>
+                </div>
+                <div className="mt-0.5 text-[15px] text-black/60 sm:text-base">
+                  ${rate.price * LESSONS_PER_MONTH} billed monthly
                 </div>
               </li>
             ))}
@@ -59,8 +58,8 @@ export default function LessonRates({
 
         <div className="mt-16 space-y-4 text-[15px] leading-relaxed text-black/75 sm:text-base">
           <p>
-            Monthly price is based on {LESSONS_PER_MONTH} lessons per month,
-            scheduled weekly.
+            Lessons are billed monthly, based on {LESSONS_PER_MONTH} weekly
+            lessons per month.
           </p>
           {showFormats && (
             <p>60-minute lessons are available in-studio only.</p>
