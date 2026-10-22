@@ -7,6 +7,7 @@ const footerNav = [
   { href: "/", label: "Home" },
   { href: "/piano-lessons", label: "Piano Lessons" },
   { href: "/contact", label: "Contact" },
+  { href: "/policies", label: "Studio Policies" },
 ];
 
 const associations = [
@@ -29,7 +30,7 @@ const associations = [
 
 export default function Footer() {
   return (
-    <footer className="bg-white text-black">
+    <footer className="bg-white text-black print:hidden">
       <div className="mx-auto max-w-6xl px-6">
         <div className="border-t border-black/15" />
         <GetInTouchButton />

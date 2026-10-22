@@ -14,7 +14,7 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="absolute inset-x-0 top-0 z-30 pt-8 pb-4">
+    <header className="absolute inset-x-0 top-0 z-30 pt-8 pb-4 print:hidden">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-6">
         <Link href="/" aria-label="Mowj Music Academy — home">
           <Logo variant="light" size="md" />
