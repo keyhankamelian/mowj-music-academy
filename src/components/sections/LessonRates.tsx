@@ -47,7 +47,7 @@ export default function LessonRates({
                   {rate.length}
                 </div>
                 <div className="mt-1 flex items-baseline justify-center gap-2.5">
-                  <span className="font-display text-3xl font-semibold text-black/75 sm:text-[2.1rem]">
+                  <span className="font-display text-[1.375rem] font-semibold text-black/75 sm:text-[1.6rem]">
                     ${rate.price}
                   </span>
                   <span className="text-xs font-semibold uppercase tracking-[0.2em] text-black/60 sm:text-[13px]">
