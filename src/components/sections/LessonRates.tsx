@@ -46,8 +46,13 @@ export default function LessonRates({
                 <div className="font-display text-xl font-extrabold uppercase tracking-wide sm:text-2xl">
                   {rate.length}
                 </div>
-                <div className="mt-1.5 text-lg font-bold sm:text-xl">
-                  ${rate.price} per lesson
+                <div className="mt-1 flex items-baseline justify-center gap-2.5">
+                  <span className="font-display text-3xl font-semibold text-black/75 sm:text-[2.1rem]">
+                    ${rate.price}
+                  </span>
+                  <span className="text-xs font-semibold uppercase tracking-[0.2em] text-black/60 sm:text-[13px]">
+                    per lesson
+                  </span>
                 </div>
               </li>
             ))}
