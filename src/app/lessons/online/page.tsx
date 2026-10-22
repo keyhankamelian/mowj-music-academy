@@ -18,12 +18,12 @@ export default function OnlineLessonsPage() {
       intro="Live, one-on-one lessons from home, for all ages, levels and styles. Whether you’re just starting or coming back to the keys, you’ll pick up right where you are, wherever you are."
       highlights={[
         {
-          title: "Berklee-Trained",
-          text: "Classical, jazz and contemporary training, graduated Magna Cum Laude from Berklee College of Music.",
+          title: "Steinway Educational Partner",
+          text: "Over 100 students mentored, with training in classical, jazz and contemporary styles.",
         },
         {
-          title: "Steinway Educational Partner",
-          text: "Over 100 students mentored, from first-time beginners to adults returning to the keys.",
+          title: "All Ages & Levels",
+          text: "From first-time beginners and young students to adults returning to the keys.",
         },
         {
           title: "Live, Not Pre-Recorded",

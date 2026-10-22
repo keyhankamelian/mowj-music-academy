@@ -16,12 +16,12 @@ export default function InStudioLessons() {
       intro="One-on-one lessons for all ages, levels and styles, in a calm, light-filled studio. Whether you’re just starting or coming back to the keys, you’ll pick up right where you are."
       highlights={[
         {
-          title: "Berklee-Trained",
-          text: "Classical, jazz and contemporary training, graduated Magna Cum Laude from Berklee College of Music.",
+          title: "Steinway Educational Partner",
+          text: "Over 100 students mentored, with training in classical, jazz and contemporary styles.",
         },
         {
-          title: "Steinway Educational Partner",
-          text: "Over 100 students mentored, from first-time beginners to adults returning to the keys.",
+          title: "All Ages & Levels",
+          text: "From first-time beginners and young students to adults returning to the keys.",
         },
         {
           title: "Built Around You",
