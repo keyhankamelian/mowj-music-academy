@@ -19,10 +19,12 @@ export default function WaveDivider({
   const d = isBottom
     ? "M0 22 C 480 132 960 132 1440 22 L1440 130 L0 130 Z"
     : "M0 0 L1440 0 L1440 108 C 960 -2 480 -2 0 108 Z";
-  // Slightly wider than the viewBox so its edges never show while it drifts.
+  // Wider than the viewBox so its edges never show while it drifts, and set
+  // a little lower than the main curve so it has room to rise without being
+  // clipped by the top of the SVG.
   const swell = isBottom
-    ? "M-120 6 C 420 128 1020 128 1560 6 L1560 130 L-120 130 Z"
-    : "M-120 0 L1560 0 L1560 124 C 1020 2 420 2 -120 124 Z";
+    ? "M-220 30 C 380 120 1060 120 1660 30 L1660 130 L-220 130 Z"
+    : "M-220 0 L1660 0 L1660 100 C 1060 10 380 10 -220 100 Z";
 
   return (
     <svg
