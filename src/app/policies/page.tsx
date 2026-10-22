@@ -28,7 +28,7 @@ const policies: { title: string; items: ReactNode[] }[] = [
       "Cancel at least 48 hours before your lesson to receive a make-up lesson.",
       "Cancellations with less than 48 hours’ notice, and missed lessons without notice, are not made up.",
       "Make-up lessons must be scheduled and completed within 4 weeks of the missed lesson, and can take place online or in-studio.",
-      "Feeling unwell? Switch that week’s in-studio lesson to an online lesson at your regular time. Just let us know as early as you can.",
+      "Emergencies and illness happen. Just let us know as soon as you can, and we’ll work something out together, like switching that week’s lesson to online.",
       "If your instructor needs to cancel, the lesson will be rescheduled at a time that works for you.",
     ],
   },
