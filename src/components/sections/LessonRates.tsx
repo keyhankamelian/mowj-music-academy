@@ -49,9 +49,6 @@ export default function LessonRates({
                 <div className="mt-1.5 text-lg font-bold sm:text-xl">
                   ${rate.price} per lesson
                 </div>
-                <div className="mt-0.5 text-[15px] text-black/60 sm:text-base">
-                  ${rate.price * LESSONS_PER_MONTH} billed monthly
-                </div>
               </li>
             ))}
         </ul>
