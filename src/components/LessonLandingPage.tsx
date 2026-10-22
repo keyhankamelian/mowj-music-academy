@@ -7,6 +7,7 @@ import LessonRates, {
 } from "@/components/sections/LessonRates";
 import MeetInstructor from "@/components/sections/MeetInstructor";
 import Testimonials from "@/components/sections/Testimonials";
+import WhyMowj from "@/components/sections/WhyMowj";
 
 /**
  * Ad landing page (/lessons/*): pricing up front and the lead form inline, so
@@ -17,7 +18,7 @@ type LessonLandingPageProps = {
   title: string;
   intro: string;
   highlights: { title: string; text: string }[];
-  /** Optional section shown between the highlights and the rates. */
+  /** Optional section shown between Why Mowj and the rates. */
   details?: ReactNode;
   /** Lesson lengths offered in this format, in minutes. */
   minutes?: number[];
@@ -80,6 +81,10 @@ export default function LessonLandingPage({
 
       <Reveal>
         <MeetInstructor />
+      </Reveal>
+
+      <Reveal>
+        <WhyMowj />
       </Reveal>
 
       {details && <Reveal>{details}</Reveal>}
