@@ -33,7 +33,7 @@ export default function OnlineLessonsPage() {
       details={<OnlineLessons />}
       minutes={[30, 45]}
       lessonFormat="Online"
-      bookText="Fill out the form and we’ll reach out to schedule a complimentary intro call and your first online lesson."
+      bookText="Fill out the form and we’ll reach out to schedule a complimentary intro call and your trial online lesson."
     />
   );
 }
