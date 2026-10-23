@@ -52,6 +52,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      data-scroll-behavior="smooth"
       className={`${heading.variable} ${body.variable} h-full antialiased`}
     >
       <body className="relative flex min-h-full flex-col">
