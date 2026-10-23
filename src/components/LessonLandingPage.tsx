@@ -5,6 +5,7 @@ import ContactForm from "@/components/ContactForm";
 import LessonRates, {
   lessonLengthOptions,
 } from "@/components/sections/LessonRates";
+import Media from "@/components/sections/Media";
 import MeetInstructor from "@/components/sections/MeetInstructor";
 import Testimonials from "@/components/sections/Testimonials";
 import WhyMowj from "@/components/sections/WhyMowj";
@@ -81,6 +82,10 @@ export default function LessonLandingPage({
 
       <Reveal>
         <MeetInstructor />
+      </Reveal>
+
+      <Reveal>
+        <Media />
       </Reveal>
 
       <Reveal>
