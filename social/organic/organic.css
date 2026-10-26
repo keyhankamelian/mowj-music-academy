@@ -1,0 +1,28 @@
+/* Organic posts and carousels. Each .slide is one 1080×1350 image; a
+   carousel stacks its slides vertically and render.sh splits them. */
+html, body { height: auto; overflow: visible; }
+body { background: #0a0a0a; }
+
+.slide { position: relative; width: 1080px; height: 1350px; overflow: hidden; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 110px 110px 100px; }
+.slide.dark { color: #fff; background: radial-gradient(115% 90% at 50% 18%, #33313a 0%, #1a1a1e 42%, #0c0c0e 72%, #070708 100%); }
+.slide.light { color: #111; background: #fff; }
+.slide .photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.slide .shade { position: absolute; inset: 0; }
+.slide > *:not(.photo):not(.shade) { position: relative; z-index: 2; }
+
+.logo { height: 92px; }
+.light .logo { filter: invert(1); }
+.spacer { flex: 1; }
+
+.counter { position: absolute !important; top: 64px; right: 76px; font-size: 22px; font-weight: 700; letter-spacing: 0.24em; opacity: 0.55; }
+.handle { position: absolute !important; bottom: 60px; left: 0; right: 0; font-size: 20px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; opacity: 0.5; }
+
+.kicker { font-size: 24px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; opacity: 0.7; }
+.headline { font-family: "Cormorant Garamond", serif; font-weight: 700; text-transform: uppercase; line-height: 0.98; letter-spacing: 0.02em; font-variant-numeric: lining-nums; }
+.italic { font-family: "Cormorant Garamond", serif; font-style: italic; font-weight: 500; }
+.body { font-size: 34px; line-height: 1.5; text-wrap: balance; }
+.dark .body { color: rgba(255,255,255,.82); }
+.light .body { color: rgba(17,17,17,.75); }
+.num { font-family: "Cormorant Garamond", serif; font-weight: 600; font-size: 260px; line-height: 0.8; font-variant-numeric: lining-nums; opacity: 0.18; }
+.rule { width: 72px; height: 2px; background: currentColor; opacity: 0.45; margin: 0 auto; }
+.swipe { font-size: 22px; font-weight: 700; letter-spacing: 0.28em; text-transform: uppercase; opacity: 0.6; }
