@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import LessonLandingPage from "@/components/LessonLandingPage";
 import OnlineLessons from "@/components/sections/OnlineLessons";
+import { activeOnlinePromo } from "@/lib/promo";
 
 // Landing page for the online Meta campaign. Online lessons are 30 or 45
 // minutes; 60-minute lessons are in-studio only.
@@ -9,6 +10,9 @@ export const metadata: Metadata = {
   description:
     "Live, one-on-one online piano lessons anywhere in the US and Canada, for all ages, levels and styles. Book your trial lesson for Fall 2026.",
 };
+
+// Re-render hourly so the promo pricing ends on its own.
+export const revalidate = 3600;
 
 export default function OnlineLessonsPage() {
   return (
@@ -32,6 +36,7 @@ export default function OnlineLessonsPage() {
       ]}
       details={<OnlineLessons />}
       minutes={[30, 45]}
+      promo={activeOnlinePromo()}
       lessonFormat="Online"
       bookText="Fill out the form and we’ll reach out to schedule a complimentary intro call and your trial online lesson."
     />
