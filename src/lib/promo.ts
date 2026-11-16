@@ -15,11 +15,11 @@ export type Promo = {
 };
 
 const ONLINE_PROMO: Promo = {
-  label: "November Special",
+  label: "Winter Special",
   prices: { 30: 50, 45: 75 },
-  terms: "November special pricing applies to online lessons through November 30.",
-  note: "November special: online lessons are $50 (30 min) and $75 (45 min) through November 30.",
-  endsAt: new Date("2026-12-01T00:00:00-08:00"),
+  terms: "Winter special pricing applies to online lessons through December 31.",
+  note: "Winter special: online lessons are $50 (30 min) and $75 (45 min) through December 31.",
+  endsAt: new Date("2027-01-01T00:00:00-08:00"),
 };
 
 /** The online-lesson promo, or null once it has ended. */
