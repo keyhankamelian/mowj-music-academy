@@ -28,6 +28,7 @@ export default function InStudioLessons() {
           text: "Every lesson is shaped around your goals, the music you love and the way you learn.",
         },
       ]}
+      format="in-studio"
       lessonFormat="In-Studio (Echo Park)"
       bookText="Fill out the form and we’ll reach out to schedule a complimentary intro call and your first lesson at the Echo Park studio."
     />

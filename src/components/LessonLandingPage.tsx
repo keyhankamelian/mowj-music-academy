@@ -4,12 +4,12 @@ import Reveal from "@/components/Reveal";
 import ContactForm from "@/components/ContactForm";
 import LessonRates, {
   lessonLengthOptions,
+  type LessonFormat,
 } from "@/components/sections/LessonRates";
 import Media from "@/components/sections/Media";
 import MeetInstructor from "@/components/sections/MeetInstructor";
 import Testimonials from "@/components/sections/Testimonials";
 import WhyMowj from "@/components/sections/WhyMowj";
-import type { Promo } from "@/lib/promo";
 
 /**
  * Ad landing page (/lessons/*): pricing up front and the lead form inline, so
@@ -22,10 +22,8 @@ type LessonLandingPageProps = {
   highlights: { title: string; text: string }[];
   /** Optional section shown between Why Mowj and the rates. */
   details?: ReactNode;
-  /** Lesson lengths offered in this format, in minutes. */
-  minutes?: number[];
-  /** Limited-time prices for this format, if any. */
-  promo?: Promo | null;
+  /** Which format's rates and lesson lengths to show. */
+  format: LessonFormat;
   /** Saved with each lead, e.g. "In-Studio (Echo Park)". */
   lessonFormat: string;
   bookText: string;
@@ -40,8 +38,7 @@ export default function LessonLandingPage({
   intro,
   highlights,
   details,
-  minutes,
-  promo,
+  format,
   lessonFormat,
   bookText,
 }: LessonLandingPageProps) {
@@ -99,7 +96,7 @@ export default function LessonLandingPage({
       {details && <Reveal>{details}</Reveal>}
 
       <Reveal>
-        <LessonRates showFormats={false} minutes={minutes} promo={promo} />
+        <LessonRates format={format} />
         <div className="bg-white pb-20 text-center md:pb-28">
           <a href="#book" className={darkButton}>
             Book Your Trial Lesson
@@ -124,7 +121,7 @@ export default function LessonLandingPage({
           <div className="mt-12">
             <ContactForm
               lessonFormat={lessonFormat}
-              lessonLengths={lessonLengthOptions(minutes, promo)}
+              lessonLengths={lessonLengthOptions(format)}
             />
           </div>
         </div>
