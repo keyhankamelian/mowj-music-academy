@@ -46,6 +46,7 @@ export default function LessonLandingPage({
   lessonFormat,
   bookText,
 }: LessonLandingPageProps) {
+  const promo = format === "online" ? onlinePromo : null;
   return (
     <>
       <Hero>
@@ -59,7 +60,7 @@ export default function LessonLandingPage({
           {intro}
         </p>
         <p className="mt-10 font-display text-xl font-bold sm:text-2xl">
-          Fall 2026 &middot; Limited Spots Remain
+          {promo ? promo.heroLine : "Fall 2026 \u00b7 Limited Spots Remain"}
         </p>
         <div className="mt-12">
           <a href="#book" className="pill-btn">
@@ -85,20 +86,8 @@ export default function LessonLandingPage({
         </section>
       </Reveal>
 
-      <Reveal>
-        <MeetInstructor />
-      </Reveal>
-
-      <Reveal>
-        <Media />
-      </Reveal>
-
-      <Reveal>
-        <WhyMowj />
-      </Reveal>
-
-      {details && <Reveal>{details}</Reveal>}
-
+      {/* Price and proof first: ad visitors come for the offer, and reviews
+          right after the price answer "is it worth it?" */}
       <Reveal>
         <LessonRates format={format} onlinePromo={onlinePromo} />
         <div className="bg-white pb-20 text-center md:pb-28">
@@ -111,6 +100,16 @@ export default function LessonLandingPage({
       <Reveal>
         <Testimonials />
       </Reveal>
+
+      <Reveal>
+        <MeetInstructor />
+      </Reveal>
+
+      <Reveal>
+        <WhyMowj />
+      </Reveal>
+
+      {details && <Reveal>{details}</Reveal>}
 
       <section id="book" className="scroll-mt-6 bg-white text-black">
         <div className="mx-auto max-w-2xl px-6 py-16 md:py-24">
@@ -130,6 +129,16 @@ export default function LessonLandingPage({
           </div>
         </div>
       </section>
+
+      {/* For visitors who keep scrolling to hear more before signing up. */}
+      <Reveal>
+        <Media />
+        <div className="bg-white pb-20 text-center md:pb-28">
+          <a href="#book" className={darkButton}>
+            Book Your Trial Lesson
+          </a>
+        </div>
+      </Reveal>
     </>
   );
 }
