@@ -193,6 +193,46 @@ Add these to the online ad set next to Ad 2 (`03-ad-online`), with the 9:16 vers
 
 ---
 
+## Online launch offer — ends November 30
+
+Online lessons are $60 (30 min) and $85 (45 min) through November 30, regularly $80 / $105. Students who enroll by then keep the rate for as long as they stay enrolled. The website shows the offer until midnight PT on November 30, then switches back on its own.
+
+Add these four to the online ad set alongside the existing ads, with the 9:16 versions from `export/stories/`. **Turn them off on December 1**: every one mentions the deadline. Ads 12 and 13 test new angles; if one wins, it's easy to remake without the offer line.
+
+### Ad 12 — "Launch Offer" · `export/14-ad-online-launch-offer.png`
+- **Primary text:** We just launched online lessons, and to celebrate, live one-on-one piano lessons are $60 (30 min) and $85 (45 min) through November 30. Enroll by then and keep that rate for as long as you stay enrolled.
+  Anywhere in the US & Canada, for all ages and levels. Book your trial lesson.
+- **Headline:** Launch Offer: Lessons From $60
+- **Description:** Enroll by Nov 30 · Keep your rate
+- **CTA button:** Book Now
+- **Ad name:** `online-launch-offer`
+
+### Ad 13 — "Lock in $60 lessons." · `export/15-ad-online-rate-lock.png`
+- **Primary text:** Most lesson prices go up every year. Ours won't, for you.
+  Enroll in online lessons by November 30 and your $60 rate is locked in for as long as you're a student. Live, one-on-one lessons for all ages and levels, anywhere in the US & Canada.
+- **Headline:** Your Rate, Locked In
+- **Description:** Regularly $80 · Ends Nov 30
+- **CTA button:** Book Now
+- **Ad name:** `online-rate-lock`
+
+### Ad 14 — "From Carnegie Hall to your living room." · `export/16-ad-online-carnegie.png`
+- **Primary text:** Learn from a pianist who's performed at Carnegie Hall, Boston Symphony Hall and on Jimmy Kimmel Live, without leaving home.
+  Live, one-on-one online lessons built around your goals and the music you love, anywhere in the US & Canada. Launch offer: lessons from $60 through November 30.
+- **Headline:** Learn From a Concert Pianist
+- **Description:** Live online · Lessons from $60
+- **CTA button:** Learn More
+- **Ad name:** `online-carnegie`
+
+### Ad 15 — "That piano in the corner? It's still waiting." · `export/17-ad-online-keyboard-waiting.png`
+- **Primary text:** Maybe it's a keyboard you bought during lockdown, or the piano you grew up with. Either way, it's been waiting long enough.
+  30 minutes a week, live online, with a teacher who starts where you are. Launch offer: lessons from $60 through November 30, and you keep that rate as long as you stay enrolled.
+- **Headline:** Finally Learn to Play
+- **Description:** Live online · Lessons from $60
+- **CTA button:** Learn More
+- **Ad name:** `online-keyboard-waiting`
+
+---
+
 ## Instant Form (not used: leads go through the website now)
 
 - **Form type:** Higher intent (adds a review step, so you get fewer junk leads)
