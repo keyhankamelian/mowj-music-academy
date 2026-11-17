@@ -8,12 +8,16 @@ import OnlineLessons from "@/components/sections/OnlineLessons";
 import LessonRates from "@/components/sections/LessonRates";
 import Testimonials from "@/components/sections/Testimonials";
 import Media from "@/components/sections/Media";
+import { activeOnlinePromo } from "@/lib/promo";
 
 export const metadata: Metadata = {
   title: "Piano Lessons | Mowj Music Academy",
   description:
     "Private piano lessons in all styles, for all levels and ages — online (US & Canada) and in-studio (Echo Park, Los Angeles). Meet your instructor, Keyhan Kamelian.",
 };
+
+// Re-render hourly so the Winter Special ends on its own.
+export const revalidate = 3600;
 
 export default function PianoLessons() {
   return (
@@ -64,7 +68,7 @@ export default function PianoLessons() {
         <OnlineLessons />
       </Reveal>
       <Reveal>
-        <LessonRates />
+        <LessonRates onlinePromo={activeOnlinePromo()} />
       </Reveal>
       <Reveal>
         <Testimonials />

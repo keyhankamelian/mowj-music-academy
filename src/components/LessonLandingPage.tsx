@@ -10,6 +10,7 @@ import Media from "@/components/sections/Media";
 import MeetInstructor from "@/components/sections/MeetInstructor";
 import Testimonials from "@/components/sections/Testimonials";
 import WhyMowj from "@/components/sections/WhyMowj";
+import type { Promo } from "@/lib/promo";
 
 /**
  * Ad landing page (/lessons/*): pricing up front and the lead form inline, so
@@ -24,6 +25,8 @@ type LessonLandingPageProps = {
   details?: ReactNode;
   /** Which format's rates and lesson lengths to show. */
   format: LessonFormat;
+  /** Limited-time online prices, if any. */
+  onlinePromo?: Promo | null;
   /** Saved with each lead, e.g. "In-Studio (Echo Park)". */
   lessonFormat: string;
   bookText: string;
@@ -39,6 +42,7 @@ export default function LessonLandingPage({
   highlights,
   details,
   format,
+  onlinePromo,
   lessonFormat,
   bookText,
 }: LessonLandingPageProps) {
@@ -96,7 +100,7 @@ export default function LessonLandingPage({
       {details && <Reveal>{details}</Reveal>}
 
       <Reveal>
-        <LessonRates format={format} />
+        <LessonRates format={format} onlinePromo={onlinePromo} />
         <div className="bg-white pb-20 text-center md:pb-28">
           <a href="#book" className={darkButton}>
             Book Your Trial Lesson
@@ -121,7 +125,7 @@ export default function LessonLandingPage({
           <div className="mt-12">
             <ContactForm
               lessonFormat={lessonFormat}
-              lessonLengths={lessonLengthOptions(format)}
+              lessonLengths={lessonLengthOptions(format, onlinePromo)}
             />
           </div>
         </div>

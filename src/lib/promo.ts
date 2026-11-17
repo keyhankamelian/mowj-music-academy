@@ -7,18 +7,16 @@ export type Promo = {
   label: string;
   /** Promo price per lesson, keyed by lesson length in minutes. */
   prices: Record<number, number>;
-  /** Terms shown under the rates where promo prices are shown. */
+  /** Terms shown under the rates. */
   terms: string;
-  /** Short description for pages that list all formats together. */
-  note: string;
   endsAt: Date;
 };
 
 const ONLINE_PROMO: Promo = {
   label: "Winter Special",
-  prices: { 30: 50, 45: 75 },
-  terms: "Winter special pricing applies to online lessons through December 31.",
-  note: "Winter special: online lessons are $50 (30 min) and $75 (45 min) through December 31.",
+  prices: { 30: 60, 45: 85 },
+  terms:
+    "Winter Special: online lessons are $60 (30 min) and $85 (45 min) through December 31. Enroll by then and keep this rate for as long as you stay enrolled.",
   endsAt: new Date("2027-01-01T00:00:00-08:00"),
 };
 
