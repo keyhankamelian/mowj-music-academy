@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     "Live, one-on-one online piano lessons anywhere in the US and Canada, for all ages, levels and styles. Book your trial lesson for Fall 2026.",
 };
 
-// Re-render hourly so the Winter Special ends on its own.
+// Re-render hourly so the launch offer ends on its own.
 export const revalidate = 3600;
 
 export default function OnlineLessonsPage() {

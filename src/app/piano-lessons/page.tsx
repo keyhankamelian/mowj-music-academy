@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "Private piano lessons in all styles, for all levels and ages — online (US & Canada) and in-studio (Echo Park, Los Angeles). Meet your instructor, Keyhan Kamelian.",
 };
 
-// Re-render hourly so the Winter Special ends on its own.
+// Re-render hourly so the launch offer ends on its own.
 export const revalidate = 3600;
 
 export default function PianoLessons() {
