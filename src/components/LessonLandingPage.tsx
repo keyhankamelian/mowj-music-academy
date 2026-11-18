@@ -86,21 +86,6 @@ export default function LessonLandingPage({
         </section>
       </Reveal>
 
-      {/* Price and proof first: ad visitors come for the offer, and reviews
-          right after the price answer "is it worth it?" */}
-      <Reveal>
-        <LessonRates format={format} onlinePromo={onlinePromo} />
-        <div className="bg-white pb-20 text-center md:pb-28">
-          <a href="#book" className={darkButton}>
-            Book Your Trial Lesson
-          </a>
-        </div>
-      </Reveal>
-
-      <Reveal>
-        <Testimonials />
-      </Reveal>
-
       <Reveal>
         <MeetInstructor />
       </Reveal>
@@ -110,6 +95,10 @@ export default function LessonLandingPage({
       </Reveal>
 
       {details && <Reveal>{details}</Reveal>}
+
+      <Reveal>
+        <LessonRates format={format} onlinePromo={onlinePromo} />
+      </Reveal>
 
       <section id="book" className="scroll-mt-6 bg-white text-black">
         <div className="mx-auto max-w-2xl px-6 py-16 md:py-24">
@@ -129,6 +118,10 @@ export default function LessonLandingPage({
           </div>
         </div>
       </section>
+
+      <Reveal>
+        <Testimonials />
+      </Reveal>
 
       {/* For visitors who keep scrolling to hear more before signing up. */}
       <Reveal>
